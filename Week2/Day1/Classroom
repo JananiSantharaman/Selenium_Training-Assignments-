@@ -1,0 +1,36 @@
+package week2.day1;
+
+public class Week2Classroom {
+	public static void main(String[] args) {
+		//scenario 1
+		//srting "testttleaf" 
+		//print the numer of e in the string
+		String test0 = "testleaf";
+		//System.out.println(test0.length());
+		int outputval = 0;
+		for (int i =0;i<test0.length()-1;i++) {	
+			char  value1 = test0.charAt(i);
+			//	System.out.println(value1);
+			if (value1 == 't' ) {
+				outputval =outputval +1 ;
+			}
+		}
+		System.out.println(outputval);
+		//Scenario 2
+		//string "testleaf is situated in twin towers teynampet"
+		//print the words with "t" or "T"	
+		String text = "Testleaf is situated in twin towers teynampet";
+		String[] split = text.split(" ");
+		String value1 = "";
+		for (int i =0;i<split.length;i++) {
+			//System.out.println(split[i]);
+			//System.out.println(split[i]);
+			if(split[i].startsWith("t") || split[i].startsWith("T") ) {  
+				value1  =value1+" " +split[i] ;						
+			}					
+		}
+		System.out.println(value1);
+	}
+}
+
+
