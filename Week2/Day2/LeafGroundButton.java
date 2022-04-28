@@ -1,12 +1,8 @@
 package week2.day2;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class LeafGroundButton {
-
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
@@ -22,6 +18,7 @@ public class LeafGroundButton {
 		System.out.println("The colour code for the button is - "+driver.findElement(By.id("color")).getCssValue("background-color"));
 		//find the size of the button
 		System.out.println("The size of the button is "+ "Width - "+driver.findElement(By.id("size")).getSize().getWidth()+" Height - "+driver.findElement(By.id("size")).getSize().getHeight());
+		driver.close();
 	}
 
 }
