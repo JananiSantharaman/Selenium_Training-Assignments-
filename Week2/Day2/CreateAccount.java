@@ -30,13 +30,10 @@ public class CreateAccount {
 		//enter the site name 
 		driver.findElement(By.xpath("//input[@id='officeSiteName']")).sendKeys("Siname");
 		//AnnualRevenue Field using Xpath Locator but class as Attribute
-		driver.findElement(By.xpath("//span[text()='Annual Revenue']/following::input[@id='annualRevenue']")).sendKeys("10000");
+		driver.findElement(By.xpath("(//input[@class='inputBox'])[5]")).sendKeys("10001");
 		//click on the create account
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 		//close the browser
-		driver.close();
-		//
-		
-		
+		driver.close();		
 	}
 }
