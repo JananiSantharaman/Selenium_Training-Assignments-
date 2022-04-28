@@ -9,11 +9,11 @@ public class AcmeLogin {
 		driver.manage().window().maximize();
 		//Open a chrome browse and Load the URL: https://acme-test.uipath.com/login
 		driver.get("https://acme-test.uipath.com/login");
-		//Enter Username as Demosalesmanager
+		//Enter Email id
 		driver.findElement(By.id("email")).sendKeys("kumar.testleaf@gmail.com");
-		//Enter Password as crmsfa
+		//Enter Password
 		driver.findElement(By.id("password")).sendKeys("leaf@12");
-		//Click on  Login Button
+		//Click on  Submit Button
 		driver.findElement(By.xpath("//button[@type ='submit']")).click();
 		//get the title of the page and display the same
 		System.out.println(driver.getTitle());
