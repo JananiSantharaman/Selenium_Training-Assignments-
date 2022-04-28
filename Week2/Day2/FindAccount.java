@@ -1,16 +1,9 @@
 package week2.day2;
-
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class FindAccount {
-
 	public static void main(String[] args) {
 		WebDriverManager.chromedriver().setup();
 		ChromeDriver driver = new ChromeDriver();
@@ -43,11 +36,13 @@ public class FindAccount {
 		String valuegot = accountname.getAttribute("value");
 		if(valuegot.trim().equals("Credit Limited Account")) {
 			System.out.println("The account name is displayed correctly ");
-
 		}
+		//verify the description box and the title page
 		WebElement description = driver.findElement(By.xpath("//textarea[@name='description']"));
-		System.out.println(description.getAttribute("value"));
-		System.out.println(driver.getTitle());
+		System.out.println("The description field contains the value - "+description.getAttribute("value"));
+		if (driver.getTitle().contains("Edit Account")) {
+			System.out.println("The user is navigated to the edit page");
+		}
 		driver.close();
 	}
 
