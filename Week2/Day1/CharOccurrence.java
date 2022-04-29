@@ -7,7 +7,7 @@ public class CharOccurrence {
 		String test0 = "testttleaf";
 		//System.out.println(test0.length());
 		int outputval = 0;
-		int compareval = 'e';
+		int compareval = 't';
 		for (int i =0;i<test0.length();i++) {	
 			char  value1 = test0.charAt(i);
 			if ( value1==compareval) {
