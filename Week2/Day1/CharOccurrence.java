@@ -1,16 +1,13 @@
 package week2.day1;
-
 public class CharOccurrence {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//scenario 1
 		//srting "testttleaf" 
 		//print the numer of e in the string
-		String test0 = "Janani";
+		String test0 = "testttleaf";
 		//System.out.println(test0.length());
 		int outputval = 0;
-		int compareval = 'f';
+		int compareval = 'e';
 		for (int i =0;i<test0.length();i++) {	
 			char  value1 = test0.charAt(i);
 			if ( value1==compareval) {
