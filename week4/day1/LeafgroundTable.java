@@ -31,7 +31,7 @@ public class LeafgroundTable {
 			WebElement getthevalue=driver.findElement(By.xpath("//table//tr["+i+"]//td[1]")); 
 			//condition to get the column vaules next Learn to interact with Elements
 			if(getthevalue.getText().equals("Learn to interact with Elements")){
-				//	System.out.println(driver.findElement(By.xpath("//table//tr["+i+"]//td[2]")).getText());
+				System.out.println(driver.findElement(By.xpath("//table//tr["+i+"]//td[2]")).getText());
 			}
 		}
 		List<String>  progress= new ArrayList<String>();
@@ -42,12 +42,17 @@ public class LeafgroundTable {
 				progress.add(progressval);
 			}
 		}
+		//sort the list
 		Collections.sort(progress);
+		//get the first value in the list
 		String leastval = progress.get(0);
+		//iterate to match the least value in table
 		for(int k=2;k<rowcount+1;k++) {
 			String leastvalue = driver.findElement(By.xpath("//table//tr["+k+"]//td[2]")).getText();
 			if(leastvalue.equals(leastval)) {
+				//click on the check box next to the least progress value
 				driver.findElement(By.xpath("//table//tr["+k+"]//td[3]")).click();
+				//check if the correct vital check box is selected
 				if(driver.findElement(By.xpath("//table//tr["+k+"]//input")).isSelected()){
 					System.out.println("The vital task for the least completed progress is selected");
 				}
