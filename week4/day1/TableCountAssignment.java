@@ -22,19 +22,13 @@ public class TableCountAssignment {
 		System.out.println("Total number of tables in the page is - "+tablecount);
 		System.out.println("-------------------------------------------------");
 		for(int i= 1;i<=tablecount;i++) {
-		//get the row count of table
-		int table1rowcount =driver.findElements(By.xpath("(//table)["+i+"]//tr")).size();
-		System.out.println("The total rows in the table in table "+i+" is - "+table1rowcount);
-		//get the column count of table
-		int table1colcount =driver.findElements(By.xpath("(//table)["+i+"]//th")).size();
-		System.out.println("The total column in the table "+i+" is - "+table1colcount);
-		System.out.println("-------------------------------------------------");
-		//int table2count=driver.findElements(By.xpath("(//table)[2]//tr")).size();
-		//System.out.println("The total rows in the table in table 1 is - "+table2count);
-		//get the column count
-		//System.out.println("-------------------------------------------------");
-		//int table2colcount =driver.findElements(By.xpath("(//table)[2]//th")).size();
-		//System.out.println("The total column in the table 1 is - "+table2colcount);
+			//get the row count of table
+			int table1rowcount =driver.findElements(By.xpath("(//table)["+i+"]//tr")).size();
+			System.out.println("The total rows in the table in table "+i+" is - "+table1rowcount);
+			//get the column count of table
+			int table1colcount =driver.findElements(By.xpath("(//table)["+i+"]//th")).size();
+			System.out.println("The total column in the table "+i+" is - "+table1colcount);
+			System.out.println("-------------------------------------------------");
 		}
 		driver.close();		
 	}
